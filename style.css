@@ -1,0 +1,54 @@
+* {
+    background-image: url("images/fondo.png");
+    box-sizing: border-box;
+    font-weight: lighter;
+}
+main {
+    width: 1080px;
+    /* padding-left: 100px; */
+}
+
+h1 {
+    font-family: sans-serif;
+    color: #334443;
+    
+}
+
+.flyer1 .flyer2 {
+    width: 70%;
+}
+
+
+.flyer50 {
+    width: 93%;
+    margin-left: 38px;
+    margin-top: -4px;;
+}
+
+.whatsapp {
+    font-family: sans-serif;
+    color: #f9b208;
+    font-size: 24px;
+    padding: 20px;
+    padding-bottom: 20px;
+    margin-left: 650px;
+    border-color: #334443;
+    text-decoration: none;
+}
+
+.email {
+    font-family: sans-serif;
+    color: #334443;
+    font-size: 24px;
+    padding: 20px;
+    padding-bottom: 20px;
+    margin-left: 650px;
+    border-color: #334443;
+    text-decoration: none;
+}
+
+.footer {
+    font: 1em sans-serif;
+    margin-left: 450px;
+    color: #334443;
+}
