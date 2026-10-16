@@ -14,11 +14,10 @@
   nav.addEventListener('click', e => { if (e.target.closest('a')) setOpen(false); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
 
-  // Tema claro u oscuro: sigue al sistema hasta que el usuario elige
+  // Tema: oscuro por defecto; el boton cambia a claro y se recuerda
   const root = document.documentElement;
   const themeBtn = document.querySelector('.theme-toggle');
-  const prefersLight = matchMedia('(prefers-color-scheme: light)');
-  const currentTheme = () => root.dataset.theme || (prefersLight.matches ? 'light' : 'dark');
+  const currentTheme = () => root.dataset.theme === 'light' ? 'light' : 'dark';
   const syncThemeBtn = () => {
     const light = currentTheme() === 'light';
     themeBtn.setAttribute('aria-label', light ? themeBtn.dataset.toDark : themeBtn.dataset.toLight);
@@ -30,7 +29,6 @@
     try { localStorage.setItem('tema', next); } catch (e) { /* sin almacenamiento */ }
     syncThemeBtn();
   });
-  prefersLight.addEventListener('change', syncThemeBtn);
   syncThemeBtn();
 
   // Borde de la cabecera al desplazar

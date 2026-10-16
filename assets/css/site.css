@@ -19,16 +19,7 @@
   color-scheme: dark;
 }
 
-/* Tema claro: sigue al sistema salvo que el usuario elija otro */
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --bg: #fafaf7; --bg-alt: #f1f0ea; --surface: #ffffff; --line: #e2e0d6;
-    --text: #0b0b0c; --muted: #55555b;
-    --accent: #0b0b0c; --deco: 196, 182, 0;
-    --top-bg: rgba(250, 250, 247, .85); --shadow: rgba(40, 36, 0, .22); --glow: rgba(255, 242, 0, .28);
-    color-scheme: light;
-  }
-}
+/* Tema claro: solo si el usuario lo elige con el boton (por defecto, oscuro) */
 :root[data-theme="light"] {
   --bg: #fafaf7; --bg-alt: #f1f0ea; --surface: #ffffff; --line: #e2e0d6;
   --text: #0b0b0c; --muted: #55555b;
@@ -39,15 +30,9 @@
 
 /* Logo segun el tema */
 .logo-light { display: none; }
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) .logo-dark { display: none; }
-  :root:not([data-theme="dark"]) .logo-light { display: block; }
-  :root:not([data-theme="dark"]) .hl { color: var(--text); background: linear-gradient(transparent 58%, var(--brand) 58%, var(--brand) 92%, transparent 92%); }
-}
 :root[data-theme="light"] .logo-dark { display: none; }
 :root[data-theme="light"] .logo-light { display: block; }
 :root[data-theme="light"] .hl { color: var(--text); background: linear-gradient(transparent 58%, var(--brand) 58%, var(--brand) 92%, transparent 92%); }
-:root[data-theme="dark"] .hl { background: none; }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
@@ -107,10 +92,6 @@ p { margin: 0; }
 .theme-toggle:hover { border-color: var(--muted); background: var(--surface); }
 .theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .theme-toggle .i-moon { display: none; }
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) .theme-toggle .i-sun { display: none; }
-  :root:not([data-theme="dark"]) .theme-toggle .i-moon { display: block; }
-}
 :root[data-theme="light"] .theme-toggle .i-sun { display: none; }
 :root[data-theme="light"] .theme-toggle .i-moon { display: block; }
 .nav a:not(.btn) { text-decoration: none; color: var(--muted); font-size: 16px; transition: color .15s; }
