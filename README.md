@@ -9,14 +9,16 @@ de/index.html       alemán
 404.html            página de error (trilingüe)
 CNAME               dominio propio para GitHub Pages
 sitemap.xml         sitemap con las tres versiones (hreflang)
-assets/css/site.css estilos (negro, amarillo #fff200 y blanco del logo)
-assets/js/site.js   menú móvil, pestañas de capturas y animaciones
-assets/img/         logos SVG, iconos, imagen social y capturas de Obradia
+assets/css/site.css estilos (negro, amarillo #fff200 y blanco del logo; tema oscuro y claro)
+assets/js/site.js   tema, menú móvil, pestañas de capturas y animaciones
+assets/img/         logos SVG (logo.svg para fondo oscuro, logo-negro.svg para el claro), iconos, imagen social y capturas de Obradia
 ```
 
 Las rutas son absolutas (`/assets/...`): el sitio debe servirse en la raíz de un dominio, no bajo `/repo/`.
 
 Al cambiar un texto, cámbialo en los tres `index.html`.
+
+El tema sigue al del sistema; el botón de sol/luna lo fija y lo guarda en `localStorage` (`tema`).
 
 ## Probar en local
 
